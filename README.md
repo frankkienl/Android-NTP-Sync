@@ -7,6 +7,10 @@ Why this app?
 
 - Because a (smart)watch should display the correct time. Even when you don't have a simcard.
 
+Licence?
+
+- http://www.dbad-license.org/
+
 Screenshots:
 
 ![Screenshot](https://raw.github.com/frankkienl/Android-NTP-Sync/master/screenshots/device-2014-07-02-224319.png "Screenshot")
