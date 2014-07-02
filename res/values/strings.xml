@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">oNTP</string>
+    <string name="steps_1">Find closest server</string>
+    <string name="steps_2">Get time from server</string>
+    <string name="steps_3">Set time on device</string>
+    <string name="select_closest">Select the closest location</string>
+</resources>

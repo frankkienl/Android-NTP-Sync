@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+>
+
+    <TextView
+        android:id="@+id/tv_location_suggested"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggested server: Global"
+    />
+    <TextView
+        android:id="@+id/tv_location_selected"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected server: Global"
+    />
+
+    <Button 
+        android:id="@+id/btn_location"
+        android:text="Select location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <Button 
+        android:id="@+id/btn_get_time"
+        android:text="Get Time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+    <Button 
+        android:id="@+id/btn_sync"
+        android:text="Sync"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+

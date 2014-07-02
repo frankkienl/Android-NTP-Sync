@@ -1,0 +1,131 @@
+{
+    "servername": "global",
+    "displayname": "Global",
+    "children": [
+        {
+            "servername": "europe",
+            "displayname": "Europe",
+            "children": [
+                {"servername": "at", "displayname": "Austria"},
+                {"servername": "ch", "displayname": "Switzerland"},
+                {"servername": "de", "displayname": "Germany"},
+                {"servername": "dk", "displayname": "Denmark"},
+                {"servername": "es", "displayname": "Spain"},
+                {"servername": "fr", "displayname": "France"},
+                {"servername": "it", "displayname": "Italy"},
+                {"servername": "lu", "displayname": "Luxembourg"},
+                {"servername": "nl", "displayname": "Netherlands"},
+                {"servername": "no", "displayname": "Norway"},
+                {"servername": "pl", "displayname": "Poland"},
+                {"servername": "se", "displayname": "Sweden"},
+                {"servername": "si", "displayname": "Slovenia"},
+                {"servername": "uk", "displayname": "United Kingdom"},
+                {"servername": "fi", "displayname": "Finland"},
+                {"servername": "ie", "displayname": "Ireland"},
+                {"servername": "ru", "displayname": "Russian Federation"},
+                {"servername": "be", "displayname": "Belgium"},
+                {"servername": "pt", "displayname": "Portugal"},
+                {"servername": "hu", "displayname": "Hungary"},
+                {"servername": "bg", "displayname": "Bulgaria"},
+                {"servername": "ro", "displayname": "Romania"},
+                {"servername": "cz", "displayname": "Czech Republic"},
+                {"servername": "yu", "displayname": "Yugoslavia"},
+                {"servername": "ee", "displayname": "Estonia"},
+                {"servername": "by", "displayname": "Belarus"},
+                {"servername": "sk", "displayname": "Slovakia"},
+                {"servername": "ua", "displayname": "Ukraine"},
+                {"servername": "lt", "displayname": "Lithuania"},
+                {"servername": "hr", "displayname": "Croatia"},
+                {"servername": "rs", "displayname": "Republic of Serbia"},
+                {"servername": "ba", "displayname": "Bosnia and Herzegovina"},
+                {"servername": "is", "displayname": "Iceland"},
+                {"servername": "li", "displayname": "Liechtenstein"},
+                {"servername": "az", "displayname": "Azerbaijan"}
+            ]
+        },
+        {            
+            "servername": "asia",
+            "displayname": "Asia",
+            "children" : [
+                {"servername": "ph", "displayname": "Philippines"},
+                {"servername": "my", "displayname": "Malaysia"},
+                {"servername": "tr", "displayname": "Turkey"},
+                {"servername": "sg", "displayname": "Singapore"},
+                {"servername": "in", "displayname": "India"},
+                {"servername": "hk", "displayname": "Hong Kong"},
+                {"servername": "ae", "displayname": "United Arab Emirates"},
+                {"servername": "jp", "displayname": "Japan"},
+                {"servername": "bd", "displayname": "Bangladesh"},
+                {"servername": "il", "displayname": "Israel"},
+                {"servername": "kr", "displayname": "Korea"},
+                {"servername": "th", "displayname": "Thailand"},
+                {"servername": "ir", "displayname": "Iran"},
+                {"servername": "tw", "displayname": "Taiwan"},
+                {"servername": "cn", "displayname": "China"},
+                {"servername": "id", "displayname": "Indonesia"},
+                {"servername": "vn", "displayname": "Vietnam"},
+                {"servername": "pk", "displayname": "Pakistan"},
+                {"servername": "uz", "displayname": "Uzbekistan"},
+                {"servername": "lk", "displayname": "Sri Lanka"},
+                {"servername": "kg", "displayname": "Kyrgystan"},
+                {"servername": "kh", "displayname": "Cambodia"},
+                {"servername": "qa", "displayname": "Qatar"},
+                {"servername": "sa", "displayname": "Saudi Arabia"},
+                {"servername": "iq", "displayname": "Iraq"},
+                {"servername": "kz", "displayname": "Kazakhstan"},
+                {"servername": "mv", "displayname": "Maldives"},
+                {"servername": "jo", "displayname": "Jordan"}
+            ]
+        },
+        {
+            "servername": "oceania",
+            "displayname": "Oceania",
+            "children" : [
+                {"servername": "au", "displayname": "Australia"},
+                {"servername": "nz", "displayname": "New Zealand"},
+                {"servername": "nc", "displayname": "New Caledonia"},
+                {"servername": "vu", "displayname": "Vanuatu"}
+            ]
+        },
+        {
+            "servername": "north-america",
+            "displayname": "North America",
+            "children": [
+                {"servername": "ca", "displayname": "Canada"},
+                {"servername": "us", "displayname": "United States"},
+                {"servername": "mx", "displayname": "Mexico"},
+                {"servername": "gt", "displayname": "Guatemala"},
+                {"servername": "pa", "displayname": "Panama"},
+                {"servername": "bs", "displayname": "Bahamas"},
+                {"servername": "cr", "displayname": "Costa Rica"},
+                {"servername": "sv", "displayname": "El Salvador"},
+                {"servername": "Guam", "displayname": "Guam"}
+            ]
+        },
+        {
+            "servername": "south-america",
+            "displayname": "South America",
+            "children": [
+                {"servername": "br", "displayname": "Brazil"},
+                {"servername": "cl", "displayname": "Chile"},
+                {"servername": "ar", "displayname": "Argentina"},
+                {"servername": "ve", "displayname": "Venezuela"},
+                {"servername": "pe", "displayname": "Peru"},
+                {"servername": "uy", "displayname": "Uruguay"},
+                {"servername": "ec", "displayname": "Ecuador"}
+            ]
+        },
+        {
+            "servername": "africa",
+            "displayname": "Africa",
+            "children": [
+                {"servername": "tz", "displayname": "Tanzania"},
+                {"servername": "za", "displayname": "South Africa"},
+                {"servername": "mg", "displayname": "Madagascar"},
+                {"servername": "tn", "displayname": "Tunisia"},
+                {"servername": "ma", "displayname": "Morocco"},
+                {"servername": "bw", "displayname": "Botswana"}
+            ]
+        }
+    ]
+}
