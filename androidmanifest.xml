@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
+
+Changelog:
+1.1: 
+- added ACRA App Crash Reporting
+- Fixed NullPointerExceptions (LocationManager.getLastKnownLocation() == null)
+- Fixed NullPointerExceptions (currentSelectedServer == null (at init) )
+
+1.0: initial version
+
 Why the minSdkVersion(9):
 http://developer.android.com/reference/android/location/LocationManager.html#requestSingleUpdate(java.lang.String,%20android.location.LocationListener,%20android.os.Looper)
 Location.requestSingleUpdate is added in API_level 9 (Android 2.3)
@@ -8,8 +16,8 @@ http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLeve
 //-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="nl.frankkie.ontp"
-          android:versionCode="1"
-          android:versionName="1.0">    
+          android:versionCode="2"
+          android:versionName="1.1">    
     
     <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="17" />
     
@@ -25,7 +33,10 @@ http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLeve
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+    <application 
+        android:label="@string/app_name" 
+        android:name=".MyApplication"
+        android:icon="@drawable/ic_launcher">
         <activity android:name="MainActivity"
                   android:label="@string/app_name">
             <intent-filter>

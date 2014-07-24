@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.TimerTask;
 import org.apache.commons.net.ntp.NTPUDPClient;
 import org.apache.commons.net.ntp.TimeInfo;
 import org.json.JSONException;
@@ -51,7 +50,7 @@ public class MainActivity extends Activity {
 
     public static boolean autoSelectSuggestedServer = true;
     public NtpServer globalNtpServer;
-    public NtpServer selectedServer = globalNtpServer;
+    public NtpServer selectedServer;
     public List<NtpServer> ntpServers;
     public MainActivity thisAct;
 
@@ -66,6 +65,8 @@ public class MainActivity extends Activity {
     }
 
     public void initNtpServers() {
+        globalNtpServer = new NtpServer("global", "Global");
+        selectedServer = globalNtpServer;
         try {
             InputStream open = getResources().getAssets().open("ntpservers.json");
             //http://stackoverflow.com/questions/2492076/android-reading-from-an-input-stream-efficiently
@@ -158,11 +159,13 @@ public class MainActivity extends Activity {
         LocationManager lm = (LocationManager) getSystemService(LOCATION_SERVICE);
         for (String provider : lm.getAllProviders()) {
             Location lastKnownLocation = lm.getLastKnownLocation(provider);
-            if (lastKnownLocation.getAccuracy() > 0 && lastKnownLocation.getAccuracy() < 500) {
-                if (lastKnownLocation.getTime() > (System.currentTimeMillis() - 24 * 60 * 60 * 1000)) {
-                    //location good enough
-                    updateLocationSuggestion(lastKnownLocation);
-                    break;
+            if (lastKnownLocation != null) { //fixes nullpointerexception
+                if (lastKnownLocation.getAccuracy() > 0 && lastKnownLocation.getAccuracy() < 500) {
+                    if (lastKnownLocation.getTime() > (System.currentTimeMillis() - 24 * 60 * 60 * 1000)) {
+                        //location good enough
+                        updateLocationSuggestion(lastKnownLocation);
+                        break;
+                    }
                 }
             }
         }
@@ -320,8 +323,14 @@ public class MainActivity extends Activity {
                     }
                 });
             }
-        } catch (Exception e) {
-            ShowException.showException(e, MainActivity.this);
+        } catch (final Exception e) {
+            handler.post(new Runnable() {
+
+                public void run() {
+                    showAlertDialog("Check you Internet-connection!\n" + e);
+                    //ShowException.showException(e, MainActivity.this);
+                }
+            });
         }
     }
 
@@ -335,8 +344,14 @@ public class MainActivity extends Activity {
             timeLocal.setToNow();
             String timeLocalString = timeLocal.format("%Y %m %d %H:%M:%S");
             showAlertDialog("Server: " + timeServerString + "\nLocal: " + timeLocalString + "\nSelected Server: " + selectedServer.displayName + " (" + selectedServer.serverName + ")");
-        } catch (Exception e) {
-            ShowException.showException(e, MainActivity.this);
+        } catch (final Exception e) {
+            handler.post(new Runnable() {
+
+                public void run() {
+                    showAlertDialog("Check you Internet-connection!\n" + e);
+                    //ShowException.showException(e, MainActivity.this);
+                }
+            });
         }
     }
 
