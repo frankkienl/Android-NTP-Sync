@@ -1,4 +1,4 @@
-Android-NTP-Sync
+NTP-Sync
 ================
 
 Sync the clock on Android with NTP server. *Root* made for Omate Truesmart (Smartwatch)
